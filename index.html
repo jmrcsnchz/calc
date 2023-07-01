@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<title></title>
+	
+	<style>
+		body{
+			margin-top: 18vh;
+			color: #232323;
+			font-family: 'Roboto', sans-serif;
+
+		}
+		* {
+			transition: 0.3s;
+		}
+
+		@font-face{
+			 font-family:'digital-7';
+			 src: url('digital-7.ttf');
+		}
+
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			opacity: 0.7; /* Firefox */
+		}
+
+		.equation {
+			width: 95%;
+			font-family: 'digital-7';
+			margin-bottom: 10px;
+			height: 50px;
+			font-size: 24pt;
+			padding: 10px;
+			box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+             outline: none;
+             border: none;
+		}
+		#calc {
+			width: fit-content;
+			margin: auto;
+							
+		}
+		#calcTable {
+			width: 100%;
+		}
+		.calcItem {
+			border: none;
+			outline: none;
+			width: 80px;
+			height: 60px;
+			font-size: 1.3em;
+			border-radius: 4px;
+			/*background: #e0e0e0;*/
+			box-shadow:  20px 20px 60px #bebebe,
+			             -20px -20px 60px #ffffff;
+		}
+		.calcItem:hover {
+			background: #e0e0e0e0;
+		}
+		.solve:hover {
+			background-color: #93c13e;
+
+		}
+		.solve {
+			background-color: #93D976; !important
+		}
+
+		#ambatukam {
+			width: 100px;
+			text-align: center;
+		}
+		#credits {
+			opacity: 0.7;
+			padding: 100px;
+			text-align: center;
+			width: 200px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="calc">
+	<center><input type="text" class="equation" id="equation" name="equation" disabled placeholder="Calculator" value=""></center>
+	<Table id="calcTable">
+		<tr>
+			<td><button onclick="calc('7')" class="calcItem">7</button></td>
+			<td><button onclick="calc('8')" class="calcItem">8</button></td>
+			<td><button onclick="calc('9')" class="calcItem">9</button></td>
+			<td><button onclick="calc('*')" class="calcItem">x</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="calc('4')" class="calcItem">4</button></td>
+			<td><button onclick="calc('5')" class="calcItem">5</button></td>
+			<td><button onclick="calc('6')" class="calcItem">6</button></td>
+			<td><button onclick="calc('/')" class="calcItem">/</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="calc('1')" class="calcItem">1</button></td>
+			<td><button onclick="calc('2')" class="calcItem">2</button></td>
+			<td><button onclick="calc('3')" class="calcItem">3</button></td>
+			<td><button onclick="calc('+')" class="calcItem">+</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="clearInput()" class="calcItem">CE</button></td>
+			<td><button onclick="calc('0')" class="calcItem">0</button></td>
+			<td><button onclick="calc('.')" class="calcItem">.</button></td>
+			<td><button onclick="calc('-')" class="calcItem">-</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="backspace()" class="calcItem">Back</button></td>
+			<td><button onclick="calc('(')" class="calcItem">(</button></td>
+			<td><button onclick="calc(')')" class="calcItem">)</button></td>
+			<td><button onclick="solve()" class="calcItem solve">=</button></td>
+		</tr>
+	</Table>
+</div>
+
+<div id="credits">
+<img src="https://i1.sndcdn.com/artworks-5aDBMLz7U2zE8hoL-D0dFww-t500x500.jpg" id="ambatukam"><br>
+Made with ♥ by Ambatukam
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
